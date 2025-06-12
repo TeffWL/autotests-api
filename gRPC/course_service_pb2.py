@@ -23,7 +23,6 @@ _sym_db = _symbol_database.Default()
 
 
 
-
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14\x63ourse_service.proto\x12\x06\x63ourse\"%\n\x10GetCourseRequest\x12\x11\n\tcourse_id\x18\x01 \x01(\t\"J\n\x11GetCourseResponse\x12\x11\n\tcourse_id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t2Q\n\rCourseService\x12@\n\tGetCourse\x12\x18.course.GetCourseRequest\x1a\x19.course.GetCourseResponseb\x06proto3')
 
 _globals = globals()

@@ -16,6 +16,5 @@ def run():
     print(f"title: \"{response.title}\"")
     print(f"description: \"{response.description}\"")
 
-
 if __name__ == '__main__':
     run()

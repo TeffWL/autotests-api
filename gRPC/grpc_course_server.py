@@ -3,21 +3,10 @@ from concurrent import futures
 import course_service_pb2
 import course_service_pb2_grpc
 
-
 class CourseServicer(course_service_pb2_grpc.CourseServiceServicer):
-    """Класс для реализации сервиса курсов"""
 
     def GetCourse(self, request, context):
-        """
-        Обработчик метода GetCourse
 
-        Args:
-            request: GetCourseRequest - запрос с идентификатором курса
-            context: grpc.ServicerContext - контекст вызова
-
-        Returns:
-            GetCourseResponse - ответ с информацией о курсе
-        """
         return course_service_pb2.GetCourseResponse(
             course_id=request.course_id,
             title="Автотесты API",
