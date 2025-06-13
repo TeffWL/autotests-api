@@ -10,7 +10,7 @@ data = {
     "title": "Новая задача",
     "completed": False,
     "userId": 1
-}
+} 
 response = httpx.post("https://jsonplaceholder.typicode.com/todos", json=data)
 print(response.status_code)  # 201 (Created)
 print(response.json())       # Ответ с созданной записью

@@ -6,7 +6,6 @@ body = {
 }
 
 """Авторизация"""
-
 def auth(body):
     login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=body)
     login_response_data = login_response.json()
