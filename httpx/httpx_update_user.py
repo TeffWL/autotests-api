@@ -1,5 +1,3 @@
-import time
-
 import httpx
 
 """Создать пользователя с помощью POST запроса на эндпоинт /api/v1/users."""
