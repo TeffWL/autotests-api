@@ -77,6 +77,16 @@ class ExercisesClient(APIClient):
         """
         return self.get("/api/v1/exercises", params=query)
 
+    def get_exercise_api_id(self, exercise_id, query: GetExercisesQueryDict) -> Response:
+        """
+        Получение списка заданий для определенного курса.
+
+        :param exercise_id: Идентификатор курса.
+        :param query: string($uuid)
+        :return: Ответ от сервера в виде объекта httpx.Response
+        """
+        return self.get(f"/api/v1/exercises{exercise_id}", params=query)
+
     def create_exercises_api(self, request: CreateExercisesRequestDict) -> Response:
         """
         Создание задания.
