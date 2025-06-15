@@ -55,26 +55,3 @@ class APIClient:
         :return: Объект Response с данными ответа.
         """
         return self.client.delete(url)
-
-
-class PublicUsersClient(APIClient):
-    def __init__(self, client: Client):
-        self.client = client
-
-    def create_user_api(self, url: URL | str, json_data: Any | None = None) -> Response:
-        return self.client.post(url, json=json_data)
-
-
-client = httpx.Client()
-users_client = PublicUsersClient(client)
-response = users_client.create_user_api(
-    url="http://localhost:8000/api/v1/users",
-    json_data={
-        "email": "dsfs33df332@mail.ru",
-        "password": "asdsadasdas",
-        "lastName": "string",
-        "firstName": "string",
-        "middleName": "string"
-    }
-)
-print(response.text)
