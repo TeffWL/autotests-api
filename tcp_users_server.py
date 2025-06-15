@@ -7,7 +7,7 @@ def server():
     server_address = ('localhost', 12345)
     server_socket.bind(server_address)
 
-    server_socket.listen(5)
+    server_socket.listen(10)
     print("Сервер запущен и ждет подключений...")
 
     message_history = []
