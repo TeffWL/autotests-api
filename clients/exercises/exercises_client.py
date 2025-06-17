@@ -79,6 +79,11 @@ class UpdateExerciseResponseDict(TypedDict):
     """
     exercise: Exercise
 
+class DeleteExerciseResponseDict(TypedDict):
+    """
+    Описание структуры ответа обновления задания.
+    """
+    None
 
 class ExercisesClient(APIClient):
     """
@@ -147,6 +152,9 @@ class ExercisesClient(APIClient):
         response = self.update_exercise_api(exercise_id, request)
         return response.json()
 
+    def delete_exercise(self, exercise_id: str) -> DeleteExerciseResponseDict:
+        response = self.delete_exercise_api(exercise_id)
+        return response.json()
 
 def get_exercises_client(user: AuthenticationUserDict) -> ExercisesClient:
     """
