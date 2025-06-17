@@ -49,7 +49,6 @@ def update_user(new_users_response_data, token):
         "firstName": "string",
         "middleName": "string"
     }
-
     headers = {"Authorization": f"Bearer {token}"}
     update_user_response = (httpx.patch
                             (f"http://localhost:8000/api/v1/users/{id}",

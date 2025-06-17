@@ -41,5 +41,4 @@ def get_user_info(token):
     print(user_response_data.status_code)
 
 
-
 get_user_info(token) #В консоль выводится JSON-ответ от сервера с данными о пользователе и статус код ответа
