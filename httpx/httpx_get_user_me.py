@@ -1,25 +1,45 @@
 import httpx
 
+# Параметры
+#Лишние f-строки - хотел брать параметры из.env
+# но подумал что это лишнее и просто забыл удалить
+
 body = {
-    f"email": "test_user@example.com",
-    f"password": "test"
+    "email": "test_user@example.com",
+    "password": "test"
 }
 
-"""Авторизация"""
-def auth(body):
-    login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=body)
+# Авторизация вызов метода api/v1/authentication/login"
+def auth_user(body):
+    #Запрос авторизации
+    login_response = (httpx.post
+                      ("http://localhost:8000/api/v1/authentication/login",
+                       json=body)) #POST-запрос к /api/v1/authentication/login успешно выполняется:
+    # Берем из ответа токен
     login_response_data = login_response.json()
     token = login_response_data["token"]["accessToken"]
+    #json ответ и статус код
+    print("status code:", login_response.status_code) #Код ответа 200
+    print("token:", token )#Ответ содержит JSON с токенами
+    #Возвращаем токен
     return token
 
-token = auth(body)
 
-"""/api/v1/users/me"""
+token = auth_user(body)
 
-def userMe(token):
+
+# Вызов метода /api/v1/users/me" с передачей token
+def get_user_info(token):
     headers = {"Authorization": f"Bearer {token}"}
-    login_response = httpx.get("http://localhost:8000/api/v1/users/me", headers=headers)
-    print(login_response.json())
-    print(login_response.status_code)
+    # GET-запрос к /api/v1/users/me успешно выполняется:
+    user_response_data = (httpx.get
+                          ("http://localhost:8000/api/v1/users/me",
+                           headers=headers))
+    # Ответ содержит JSON с данными пользователя
+    print(user_response_data.json())
+    # Код ответа 200
+    print(user_response_data.status_code)
 
-print(userMe(token))
+
+
+get_user_info(token) #В консоль выводится JSON-ответ от сервера с данными о пользователе и статус код ответа

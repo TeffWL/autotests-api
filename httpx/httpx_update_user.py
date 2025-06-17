@@ -1,58 +1,65 @@
 import httpx
-
-"""Создать пользователя с помощью POST запроса на эндпоинт /api/v1/users."""
-from tools.fakers import get_random_email  # Импортируем функцию для генерации случайного email
+from tools.fakers import get_random_email
 
 
+#Создать пользователя
 def new_users():
-    password = get_random_email()
     email = get_random_email()
+
     body_users = {
         "email": email,
-        "password": password,
+        "password": "string",
         "lastName": "string",
         "firstName": "string",
         "middleName": "string"
     }
-    login_response = httpx.post("http://localhost:8000/api/v1/users", json=body_users)
-    login_response_data = login_response.json()
-    print(f"Cоздан пользователь {login_response_data}")
-    email = login_response_data["user"]["email"]
-    id = login_response_data["user"]["id"]
-    print(f"Получен пароль и логин,{email}, {password}")
-    return password, email, id
+    new_users_response = httpx.post("http://localhost:8000/api/v1/users", json=body_users)
+    new_users_response_data = new_users_response.json()
+    print(f"Cоздан пользователь {new_users_response_data}")
+
+    return new_users_response_data
 
 
-"""Авторизация"""
-
-def auth(password, email):
-    auth_body = {
-        f"email": email,
-        f"password": password
+# Авторизация вызов метода api/v1/authentication/login"
+def auth_user(new_users_response_data):
+    body = {
+        "email": new_users_response_data["user"]['email'],
+        "password": "string"
     }
-    login_response = httpx.post("http://localhost:8000/api/v1/authentication/login", json=auth_body)
+
+    login_response = (httpx.post
+                      ("http://localhost:8000/api/v1/authentication/login",json=body))  #POST-запрос к /api/v1/authentication/login успешно выполняется:
     login_response_data = login_response.json()
     token = login_response_data["token"]["accessToken"]
-    print(f'пользователь авторизовван получен токен {token}')
+
+    print("status code:", login_response.status_code)  #Код ответа 200
+    print("token:", token)  #Ответ содержит JSON с токенами
+
     return token
 
 
-"""Изменение пользователя"""
-def update_user(id, token):
-    password = get_random_email()
+#Изменение пользователя
+def update_user(new_users_response_data, token):
+    id = new_users_response_data["user"]["id"]
     email = get_random_email()
+
     body_users = {
         "email": email,
-        "password": password,
         "lastName": "string",
         "firstName": "string",
         "middleName": "string"
     }
-    headers = {"Authorization": f"Bearer {token}"}
-    login_response = httpx.patch(f"http://localhost:8000/api/v1/users/{id}", headers=headers, json=body_users)
-    login_response_data = login_response.json()
-    print(f"Пользователь изменен {login_response_data}")
 
-password, email, id = new_users()
-token = auth(password, email)
-update_user(id, token)
+    headers = {"Authorization": f"Bearer {token}"}
+    update_user_response = (httpx.patch
+                            (f"http://localhost:8000/api/v1/users/{id}",
+                             headers=headers,
+                             json=body_users))
+    update_user_response_data = update_user_response.json()
+
+    print(f"Пользователь изменен {update_user_response_data}")
+
+
+new_users_response_data = new_users() # Создаем пользователя, берем id
+token = auth_user(new_users_response_data) # авторизация, логин берем из new_users_response_data
+update_user(new_users_response_data, token)# Обновляем пользователя берем токн из auth_user и id из new_users_response_data
