@@ -25,9 +25,6 @@ def auth_user(body):
     return token
 
 
-token = auth_user(body)
-
-
 # Вызов метода /api/v1/users/me" с передачей token
 def get_user_info(token):
     headers = {"Authorization": f"Bearer {token}"}
@@ -40,5 +37,5 @@ def get_user_info(token):
     # Код ответа 200
     print(user_response_data.status_code)
 
-
+token = auth_user(body)
 get_user_info(token) #В консоль выводится JSON-ответ от сервера с данными о пользователе и статус код ответа
