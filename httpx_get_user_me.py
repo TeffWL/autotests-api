@@ -16,8 +16,8 @@ def auth_user(body):
                       ("http://localhost:8000/api/v1/authentication/login",
                        json=body)) #POST-запрос к /api/v1/authentication/login успешно выполняется:
     # Берем из ответа токен
-    login_response_data = login_response.json()
-    token = login_response_data["token"]["accessToken"]
+    auth_response_data = login_response.json()
+    token = auth_response_data["token"]["accessToken"]
     #json ответ и статус код
     print("status code:", login_response.status_code) #Код ответа 200
     print("token:", token )#Ответ содержит JSON с токенами
