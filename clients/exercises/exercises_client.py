@@ -163,3 +163,4 @@ def get_exercises_client(user: AuthenticationUserDict) -> ExercisesClient:
     :return: Готовый к использованию ExercisesClient.
     """
     return ExercisesClient(client=get_private_http_client(user))
+

@@ -101,6 +101,7 @@ update_exercise_response = exercises_client.update_exercise(
 print(f'Обновления данных задания exercise_id: {exercise_uuid} \n{update_exercise_response}')
 
 
+
 # delete
 # Делаем запрос и передаем exercise_id
 #exercise_uuid = create_exercise_response["exercise"]["id"]
