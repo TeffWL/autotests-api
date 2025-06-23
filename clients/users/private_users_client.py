@@ -1,3 +1,4 @@
+from curlify2 import Curlify
 from httpx import Response
 
 from clients.api_client import APIClient
@@ -48,6 +49,7 @@ class PrivateUsersClient(APIClient):
 
     def get_user(self, user_id: str) -> GetUserResponseSchema:
         response = self.get_user_api(user_id)
+
         return GetUserResponseSchema.model_validate_json(response.text)
 
 
