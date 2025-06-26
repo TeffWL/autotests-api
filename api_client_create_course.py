@@ -1,4 +1,3 @@
-import logging
 from clients.courses.courses_client import get_courses_client
 from clients.courses.courses_schema import CreateCourseRequestSchema, GetCoursesQuerySchema, GetCoursesPatchSchema, \
     UpdateCourseRequestSchema
@@ -7,20 +6,13 @@ from clients.files.files_schema import CreateFileRequestSchema
 from clients.private_http_builder import AuthenticationUserSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.fakers import get_random_email
 
 public_users_client = get_public_users_client()
 
 # Создаем пользователя
-create_user_request = CreateUserRequestSchema(
-    email=get_random_email(),
-    password="string",
-    last_name="string",
-    first_name="string",
-    middle_name="string"
-)
+create_user_request = CreateUserRequestSchema()
 create_user_response = public_users_client.create_user(create_user_request)
-
+print('Создан пользователь', create_user_response)
 # Инициализируем клиенты
 authentication_user = AuthenticationUserSchema(
     email=create_user_request.email,
@@ -31,26 +23,18 @@ courses_client = get_courses_client(authentication_user)
 
 # Загружаем файл
 create_file_request = CreateFileRequestSchema(
-    filename="image.png",
-    directory="courses",
     upload_file="/Users/msemushev/Desktop/auto/autotests-api/test_data/files/image.png"
 )
 create_file_response = files_client.create_file(create_file_request)
 print('Create file data:', create_file_response)
 
-# ost /api/v1/courses
+# post /api/v1/courses
 create_course_request = CreateCourseRequestSchema(
-    title="Python",
-    max_score=100,
-    min_score=10,
-    description="Python API course",
-    estimated_time="2weeks",
-    preview_fileId=create_file_response.file.id,
+    preview_file_id=create_file_response.file.id,
     created_by_user_id=create_user_response.user.id
 )
 create_course_response = courses_client.create_course(create_course_request)
 print('Create course data:', create_course_response)
-
 
 #get /api/v1/courses?qury
 userId = create_course_response.course.created_by_user.id
@@ -66,11 +50,6 @@ print(f'Получение заданий по course_id:{course_id} \n {get_cou
 #patch /api/v1/courses/{course_id}
 
 update_course_request = UpdateCourseRequestSchema(
-    title="Python",
-    max_score=100,
-    min_score=10,
-    description="Python API course",
-    estimated_time="1000"
 )
 course_id = create_course_response.course.id
 update_course_response = courses_client.update_course(course_id, update_course_request)

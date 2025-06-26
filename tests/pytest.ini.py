@@ -1,0 +1,8 @@
+# # pytest.ini
+# import pytest
+# from sniffio import _tests
+#
+# [pytest]
+# python_files = *_tests.py test_*.py  # Это мы добавили в предыдущем шаге
+# python_classes = Test*               # Устанавливает правила для имен классов
+# python_functions = test_*            # Устанавливает правила для имен функций

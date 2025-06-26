@@ -1,3 +1,4 @@
+from curlify2 import Curlify
 from httpx import Response
 from clients.api_client import APIClient
 from clients.authentication.authentication_client import AuthenticationClient
@@ -75,8 +76,8 @@ class CoursesClient(APIClient):
 
     def create_course(self, request: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         response = self.create_course_api(request)
-        # curl_command = Curlify(response.request).to_curl()
-        # print(curl_command)
+        curl_command = Curlify(response.request).to_curl()
+        print(curl_command)
         return CreateCourseResponseSchema.model_validate_json(response.text)
 
     def update_course(self, course_id: str, request: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:

@@ -1,18 +1,19 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
-# Добавили суффикс Schema вместо Dict
-class TokenSchema(BaseModel):  # Наследуем от BaseModel вместо TypedDict
+class TokenSchema(BaseModel):
     """
     Описание структуры аутентификационных токенов.
     """
+    model_config = ConfigDict(populate_by_name=True)
+
     token_type: str = Field(alias="tokenType")  # Использовали alise
     access_token: str = Field(alias="accessToken")  # Использовали alise
     refresh_token: str = Field(alias="refreshToken")  # Использовали alise
 
 
-# Добавили суффикс Schema вместо Dict
-class LoginRequestSchema(BaseModel):  # Наследуем от BaseModel вместо TypedDict
+
+class LoginRequestSchema(BaseModel):
     """
     Описание структуры запроса на аутентификацию.
     """
@@ -21,7 +22,7 @@ class LoginRequestSchema(BaseModel):  # Наследуем от BaseModel вме
 
 
 # Добавили суффикс Schema вместо Dict
-class LoginResponseSchema(BaseModel):  # Наследуем от BaseModel вместо TypedDict
+class LoginResponseSchema(BaseModel):
     """
     Описание структуры ответа аутентификации.
     """
@@ -29,8 +30,11 @@ class LoginResponseSchema(BaseModel):  # Наследуем от BaseModel вм�
 
 
 # Добавили суффикс Schema вместо Dict
-class RefreshRequestSchema(BaseModel):  # Наследуем от BaseModel вместо TypedDict
+class RefreshRequestSchema(BaseModel):
     """
     Описание структуры запроса для обновления токена.
+
     """
+    model_config = ConfigDict(populate_by_name=True)
+
     refresh_token: str = Field(alias="refreshToken")  # Использовали alise

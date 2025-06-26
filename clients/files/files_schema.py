@@ -1,5 +1,7 @@
-from pydantic import BaseModel, HttpUrl, ConfigDict
+from pydantic import BaseModel, HttpUrl, ConfigDict, Field
 from pydantic.alias_generators import to_camel
+
+from tools.fakers import fake
 
 
 # GET /api/v1/files/{file_id}
@@ -30,8 +32,9 @@ class CreateFileRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание файла.
     """
-    filename: str
-    directory: str
+    filename: str = Field(default_factory=lambda: f"{fake.uuid4()}.png")
+    # Директорию оставляем статичной, чтобы все тестовые файлы на сервере попадали в одну папку
+    directory: str = Field(default="tests")
     upload_file: str
 
 

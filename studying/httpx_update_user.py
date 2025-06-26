@@ -1,10 +1,10 @@
 import httpx
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 
 #Создать пользователя
 def new_users():
-    email = get_random_email()
+    email = fake.email()()
 
     body_users = {
         "email": email,
@@ -41,7 +41,7 @@ def auth_user(new_users_response_data):
 #Изменение пользователя
 def update_user(new_users_response_data, token):
     id = new_users_response_data["user"]["id"]
-    email = get_random_email()
+    email = fake.email()()
 
     body_users = {
         "email": email,

@@ -8,18 +8,13 @@ from clients.files.files_schema import CreateFileRequestSchema
 from clients.private_http_builder import AuthenticationUserSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 # Создаем пользователя
 public_users_client = get_public_users_client()
 
-create_user_request = CreateUserRequestSchema(
-    email=get_random_email(),
-    password="string",
-    last_name="string",
-    first_name="string",
-    middle_name="string"
-)
+create_user_request = CreateUserRequestSchema()
+
 create_user_response = public_users_client.create_user(create_user_request)
 # Авторизация + получаем токен
 authentication_user = AuthenticationUserSchema(
@@ -33,8 +28,6 @@ exercises_client = get_exercises_client(authentication_user)
 
 #Отправляем файл
 create_file_request = CreateFileRequestSchema(
-    filename="image.png",
-    directory="courses",
     upload_file="/Users/msemushev/Desktop/auto/autotests-api/test_data/files/image.png"
 )
 create_file_response = files_client.create_file(create_file_request)
@@ -42,11 +35,6 @@ print('Create file data:', create_file_response)
 
 # Создаем курс
 create_course_request = CreateCourseRequestSchema(
-    title="Python",
-    maxScore=100,
-    minScore=10,
-    description="Python API course",
-    estimatedTime="2 weeks",
     previewFileId=create_file_response.file.id,
     createdByUserId=create_user_response.user.id
 )
@@ -55,13 +43,7 @@ print('Create course data:', create_course_response)
 
 # POST /api/v1/exercises
 create_exercise_request = CreateExerciseRequestSchema(
-    title="Задание 5 функции",
     courseId=create_course_response.course.id,
-    maxScore=5,
-    minScore=1,
-    orderIndex=0,
-    description="Exercise 1",
-    estimatedTime="5 minutes"
 )
 create_exercise_response = exercises_client.create_exercise(create_exercise_request)
 print('Задание для курса:', create_exercise_response)
@@ -84,12 +66,6 @@ print(f'Получение задания по exercise_id:{exercise_uuid} \n {c
 # PATCH /api/v1/exercises/{exercise_id}
 exercise_uuid = create_exercise_response.exercise.id
 update_exercise_request = UpdateExerciseRequestSchema(
-    title="Задание 5.1 функции",
-    maxScore=5,
-    minScore=1,
-    orderIndex=0,
-    description="Exercise 1",
-    estimatedTime="5 minutes"
 )
 update_exercise_response = exercises_client.update_exercise(
     exercise_id=exercise_uuid,
@@ -102,6 +78,6 @@ print(f'Обновления данных задания exercise_id: {exercise_
 
 # delete
 # Делаем запрос и передаем exercise_id
-#exercise_uuid = create_exercise_response["exercise"]["id"]
-#delete_exercise_response = exercises_client.delete_exercise(exercise_uuid)
-#print(f'Удаление exercise_id:{exercise_uuid} \n {delete_exercise_response}')
+exercise_uuid = create_exercise_response.exercise.id
+delete_exercise_response = exercises_client.delete_exercise(exercise_uuid)
+print(f'Удаление exercise_id:{exercise_uuid} \n {delete_exercise_response}')

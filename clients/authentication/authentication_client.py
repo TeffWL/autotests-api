@@ -1,3 +1,4 @@
+from curlify2 import Curlify
 from httpx import Response
 
 from clients.api_client import APIClient
@@ -21,11 +22,7 @@ class AuthenticationClient(APIClient):
         :param request: Словарь с email и password.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(
-            "/api/v1/authentication/login",
-            # Сериализуем модель в словарь с использованием alias
-            json=request.model_dump(by_alias=True)
-        )
+        return self.post("/api/v1/authentication/login", json=request.model_dump(by_alias=True))
 
     # Теперь используем pydantic-модель для аннотации
     def refresh_api(self, request: RefreshRequestSchema) -> Response:
@@ -41,12 +38,9 @@ class AuthenticationClient(APIClient):
             json=request.model_dump(by_alias=True)
         )
 
-    # Теперь используем pydantic-модель для аннотации
     def login(self, request: LoginRequestSchema) -> LoginResponseSchema:
         response = self.login_api(request)
-        # Инициализируем модель через валидацию JSON строки
         return LoginResponseSchema.model_validate_json(response.text)
-
 
 def get_authentication_client() -> AuthenticationClient:
     """
