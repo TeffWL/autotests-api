@@ -19,7 +19,7 @@ class ExercisesClient(APIClient):
         :param query: Словарь с courseId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get("/api/v1/exercises", params= query.model_dump(by_alias=True))
+        return self.get("/api/v1/exercises", params=query.model_dump(by_alias=True))
 
     def get_exercise_api(self, exercise_id: str) -> Response:
         """
@@ -78,6 +78,7 @@ class ExercisesClient(APIClient):
         response = self.delete_exercise_api(exercise_id)
         return response.json()
 
+
 def get_exercises_client(user: AuthenticationClient) -> ExercisesClient:
     """
     Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
@@ -85,4 +86,3 @@ def get_exercises_client(user: AuthenticationClient) -> ExercisesClient:
     :return: Готовый к использованию ExercisesClient.
     """
     return ExercisesClient(client=get_private_http_client(user))
-
