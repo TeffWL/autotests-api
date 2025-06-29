@@ -1,5 +1,5 @@
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserResponseSchema
-from tools.asserions.assert_equal import assert_equal
+from tools.assertions.assert_equal import assert_equal
 
 
 def assert_create_user_response(request: CreateUserRequestSchema, response: CreateUserResponseSchema):

@@ -7,9 +7,9 @@ from clients.authentication.authentication_schema import LoginRequestSchema, Log
 from clients.users.private_users_client import PrivateUsersClient
 from clients.users.users_schema import GetUserResponseSchema
 from fixtures.users import UserFixture
-from tools.asserions.base import assert_status_code
-from tools.asserions.schema import validate_json_schema
-from tools.asserions.users import assert_get_user_response, assert_user
+from tools.assertions.base import assert_status_code
+from tools.assertions.schema import validate_json_schema
+from tools.assertions.users import assert_get_user_response, assert_user
 
 
 def test_get_user_me(

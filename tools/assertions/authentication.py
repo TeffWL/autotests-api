@@ -1,6 +1,6 @@
 from clients.authentication.authentication_schema import LoginResponseSchema
-from tools.asserions.assert_equal import assert_equal
-from tools.asserions.base import assert_is_true
+from tools.assertions.assert_equal import assert_equal
+from tools.assertions.base import assert_is_true
 
 
 def assert_login_response(response: LoginResponseSchema):

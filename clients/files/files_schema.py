@@ -5,14 +5,14 @@ from tools.fakers import fake
 
 
 # GET /api/v1/files/{file_id}
-    # request x
-    # response  ✔ FileResponseSchema
-    # error  ✔ ValidationError
+# request x
+# response  ✔ FileResponseSchema
+# error  ✔ ValidationError
 
 # POST /api/v1/files
-    # request ✔ CreateFileRequestSchema
-    # response  ✔ FileResponseSchema
-    # error  ✔ ValidationError
+# request ✔ CreateFileRequestSchema
+# response  ✔ FileResponseSchema
+# error  ✔ ValidationError
 
 # DELTETE /api/v1/files/{file_id}
 
@@ -41,5 +41,12 @@ class CreateFileRequestSchema(BaseModel):
 class CreateFileResponseSchema(BaseModel):
     """
     Описание структуры ответа создания файла.
+    """
+    file: FileSchema
+
+
+class GetFileResponseSchema(BaseModel):
+    """
+    Описание структуры запроса получения файла.
     """
     file: FileSchema
