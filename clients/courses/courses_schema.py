@@ -20,8 +20,7 @@ class GetCoursesPatchSchema(BaseModel):
     course_id: str
 
 
-
-class GetCourseSchema(BaseModel):
+class CourseSchema(BaseModel):
     """
     GET /api/v1/courses
     GET /api/v1/courses{id}
@@ -58,24 +57,27 @@ class CreateCourseRequestSchema(BaseModel):
     # Добавили генерацию случайного предполагаемого времени прохождения курса
     estimated_time: str = Field(alias="estimatedTime", default_factory=fake.estimated_time)
     # Добавили генерацию случайного идентификатора файла
-    preview_file_id: str = Field(alias="previewFileId")#, default_factory=fake.uuid4)
+    preview_file_id: str = Field(alias="previewFileId")  #, default_factory=fake.uuid4)
     # Добавили генерацию случайного идентификатора пользователя
-    created_by_user_id: str = Field(alias="createdByUserId")#, default_factory=fake.uuid4)
+    created_by_user_id: str = Field(alias="createdByUserId")  #, default_factory=fake.uuid4)
 
 
 class GetCoursesResponseSchema(BaseModel):
-    courses: List[GetCourseSchema]
+    """
+    Описание структуры ответа на получение списка курсов.
+    """
+    courses: list[CourseSchema]
 
 
 class GetCourseResponseSchema(BaseModel):
-    course: GetCourseSchema
+    course: CourseSchema
 
 
 class CreateCourseResponseSchema(BaseModel):
     model_config = ConfigDict(
         populate_by_name=True
     )
-    course: GetCourseSchema
+    course: CourseSchema
 
 
 class UpdateCourseRequestSchema(BaseModel):
@@ -100,7 +102,8 @@ class UpdateCourseResponseSchema(BaseModel):
     model_config = ConfigDict(
         populate_by_name=True
     )
-    course: GetCourseSchema
+    course: CourseSchema
+
 
 class DeleteExerciseResponseShema(BaseModel):
     """

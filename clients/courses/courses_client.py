@@ -3,7 +3,7 @@ from httpx import Response
 from clients.api_client import APIClient
 from clients.authentication.authentication_client import AuthenticationClient
 from clients.courses.courses_schema import GetCoursesQuerySchema, CreateCourseRequestSchema, UpdateCourseRequestSchema, \
-    CreateCourseResponseSchema, GetCourseSchema, UpdateCourseResponseSchema, DeleteExerciseResponseShema, \
+    CreateCourseResponseSchema, UpdateCourseResponseSchema, DeleteExerciseResponseShema, \
     GetCourseResponseSchema, GetCoursesResponseSchema
 from clients.private_http_builder import get_private_http_client
 
@@ -20,6 +20,7 @@ class CoursesClient(APIClient):
         :param query: Словарь с userId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
+
         return self.get("/api/v1/courses", params=query.model_dump(by_alias=True))
 
     def get_course_api(self, course_id: str) -> Response:
@@ -29,6 +30,7 @@ class CoursesClient(APIClient):
         :param course_id: Идентификатор курса.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
+
         return self.get(f"/api/v1/courses/{course_id}")
 
     def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
@@ -64,8 +66,8 @@ class CoursesClient(APIClient):
 
     def get_courses(self, query: GetCoursesQuerySchema) -> GetCoursesResponseSchema:
         response = self.get_courses_api(query)
-        # curl_command = Curlify(response.request).to_curl()
-        # print(curl_command)
+        #curl_command = Curlify(response.request).to_curl()
+        #print(curl_command)
         return GetCoursesResponseSchema.model_validate_json(response.text)
 
     def get_course(self, course_id: str) -> GetCourseResponseSchema:
