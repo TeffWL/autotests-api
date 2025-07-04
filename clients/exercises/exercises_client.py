@@ -1,9 +1,10 @@
+from curlify2 import Curlify
 from httpx import Response
 from clients.api_client import APIClient
 from clients.authentication.authentication_client import AuthenticationClient
 from clients.exercises.exercise_shema import GetExercisesQuerySchema, CreateExerciseRequestSchema, \
     GetExerciseResponseSchema, DeleteExerciseResponseSchema, \
-    UpdateExerciseResponseSchema, UpdateExerciseRequestSchema, GetExercisesResponseSchema
+    UpdateExerciseResponseSchema, UpdateExerciseRequestSchema, GetExercisesResponseSchema, CreateExerciseResponseSchema
 from clients.private_http_builder import get_private_http_client
 
 
@@ -64,11 +65,13 @@ class ExercisesClient(APIClient):
 
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         response = self.get_exercise_api(exercise_id)
+        curl_command = Curlify(response.request).to_curl()
+        print(curl_command)
         return GetExerciseResponseSchema.model_validate_json(response.text)
 
-    def create_exercise(self, request: CreateExerciseRequestSchema) -> GetExerciseResponseSchema:
+    def create_exercise(self, request: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
         response = self.create_exercise_api(request)
-        return GetExerciseResponseSchema.model_validate_json(response.text)
+        return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     def update_exercise(self, exercise_id: str, request: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         response = self.update_exercise_api(exercise_id, request)

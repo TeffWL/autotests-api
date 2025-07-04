@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 
 from pydantic import BaseModel, Field, ConfigDict
 
@@ -33,5 +33,16 @@ class InternalErrorResponseSchema(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     details: str = Field(alias="detail")
+
+
+class ExerciseNotFoundErrorResponseSchema(BaseModel):
+    """
+    Модель для описания внутренней ошибки.
+    """
+
+    model_config = ConfigDict(populate_by_name=True)
+
+    details: List[ValidationErrorSchema] = Field(alias="detail")
+
 
 

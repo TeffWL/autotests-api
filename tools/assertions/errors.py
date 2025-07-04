@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict, Field
 
-from clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema, InternalErrorResponseSchema
+from clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema, InternalErrorResponseSchema, \
+    ExerciseNotFoundErrorResponseSchema
 from tools.assertions.assert_equal import assert_equal
 from tools.assertions.base import assert_length
 
@@ -92,4 +93,5 @@ def assert_internal_error_response(
     :raises AssertionError: Если значения полей не совпадают.
     """
     assert_equal(actual.details, expected.details, "details")
+
 

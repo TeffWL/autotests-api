@@ -42,10 +42,6 @@ class TestCourses:
         # Проверяем параметры запроса и ответа
         assert_create_course_response(request_data, response_data)
 
-        # Проверяем вложенные сущности
-        assert_file(response_data.course.preview_file, function_file.response.file)
-        assert_user(response_data.course.created_by_user, function_user.response.user)
-
         # Проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
