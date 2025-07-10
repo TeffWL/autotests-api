@@ -1,3 +1,4 @@
+import allure
 from curlify2 import Curlify
 from httpx import Response
 
@@ -13,8 +14,7 @@ class AuthenticationClient(APIClient):
     """
     Клиент для работы с /api/v1/authentication
     """
-
-    # Теперь используем pydantic-модель для аннотации
+    @allure.step("Authenticate user")  # Добавили allure шаг
     def login_api(self, request: LoginRequestSchema) -> Response:
         """
         Метод выполняет аутентификацию пользователя.
@@ -25,6 +25,7 @@ class AuthenticationClient(APIClient):
         return self.post("/api/v1/authentication/login", json=request.model_dump(by_alias=True))
 
     # Теперь используем pydantic-модель для аннотации
+    @allure.step("Refresh authentication token")  # Добавили allure шаг
     def refresh_api(self, request: RefreshRequestSchema) -> Response:
         """
         Метод обновляет токен авторизации.

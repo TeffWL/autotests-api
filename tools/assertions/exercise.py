@@ -1,3 +1,5 @@
+import allure
+
 from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercise_shema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     GetExercisesResponseSchema, ExerciseSchema, UpdateExerciseRequestSchema, \
@@ -6,6 +8,7 @@ from tools.assertions.assert_equal import assert_equal
 from tools.assertions.errors import assert_internal_error_response
 
 
+@allure.step("Check create exercise response")
 def assert_create_exercise_response(
         request: CreateExerciseRequestSchema,
         response: CreateExerciseResponseSchema,
@@ -27,6 +30,7 @@ def assert_create_exercise_response(
     assert_equal(response.exercise.estimated_time, request.estimated_time, "estimated_time")
 
 
+@allure.step("Check exercise")
 def assert_exercise(
         actual: ExerciseSchema,
         expected: ExerciseSchema
@@ -49,6 +53,7 @@ def assert_exercise(
     assert_equal(actual.estimated_time, expected.estimated_time, "estimatedTime")
 
 
+@allure.step("Check get exercise response")
 def assert_get_exercise_response(
         get_exercise_response: CreateExerciseResponseSchema,
         create_exercise_response: CreateExerciseResponseSchema
@@ -64,36 +69,38 @@ def assert_get_exercise_response(
     assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
 
 
+@allure.step("Check update exercise response")
 def assert_update_exercise_response(
-            request: UpdateExerciseRequestSchema,
-            response: UpdateExerciseResponseSchema
-    ):
-        """
+        request: UpdateExerciseRequestSchema,
+        response: UpdateExerciseResponseSchema
+):
+    """
         Проверяет, что ответ на обновление pf соответствует данным из запроса.
 
         :param request: Исходный запрос на обновление курса.
         :param response: Ответ API с обновленными данными курса.
         :raises AssertionError: Если хотя бы одно поле не совпадает.
         """
-        if request.title is not None:
-            assert_equal(response.exercise.title, request.title, "title")
+    if request.title is not None:
+        assert_equal(response.exercise.title, request.title, "title")
 
-        if request.max_score is not None:
-            assert_equal(response.exercise.max_score, request.max_score, "max_score")
+    if request.max_score is not None:
+        assert_equal(response.exercise.max_score, request.max_score, "max_score")
 
-        if request.min_score is not None:
-            assert_equal(response.exercise.min_score, request.min_score, "min_score")
+    if request.min_score is not None:
+        assert_equal(response.exercise.min_score, request.min_score, "min_score")
 
-        if request.order_index is not None:
-            assert_equal(response.exercise.order_index, request.order_index, "order_index")
+    if request.order_index is not None:
+        assert_equal(response.exercise.order_index, request.order_index, "order_index")
 
-        if request.description is not None:
-            assert_equal(response.exercise.description, request.description, "description")
+    if request.description is not None:
+        assert_equal(response.exercise.description, request.description, "description")
 
-        if request.estimated_time is not None:
-            assert_equal(response.exercise.estimated_time, request.estimated_time, "estimated_time")
+    if request.estimated_time is not None:
+        assert_equal(response.exercise.estimated_time, request.estimated_time, "estimated_time")
 
 
+@allure.step("Check not fount response")
 def assert_exercise_not_found_response(actual: InternalErrorResponseSchema):
     """
     Функция для проверки ошибки, если не нашли задание.
@@ -107,6 +114,7 @@ def assert_exercise_not_found_response(actual: InternalErrorResponseSchema):
     assert_internal_error_response(actual, expected)
 
 
+@allure.step("Check get exercises response")
 def assert_get_exercises_response(
         get_exercise_response: GetExercisesResponseSchema,
         create_exercise_response: CreateExerciseResponseSchema

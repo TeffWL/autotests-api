@@ -1,0 +1,2 @@
+python -m pytest -m "regression" --alluredir=./allure-results
+allure open ./allure-report

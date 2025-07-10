@@ -1,5 +1,7 @@
 from typing import Any
 
+import allure
+
 
 def assert_status_code(actual: int, expected: int):
     """
@@ -15,6 +17,7 @@ def assert_status_code(actual: int, expected: int):
         f'Actual status code: {actual}'
     )
 
+@allure.step("Check that {name} equals to {expected}")  # Добавили allure шаг
 
 def assert_equal(actual: Any, expected: Any, name: str):
     """
