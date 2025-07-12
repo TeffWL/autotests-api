@@ -6,6 +6,7 @@ from clients.api_client import APIClient
 # Добавили импорт моделей
 from clients.authentication.authentication_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
 from clients.public_http_builder import get_public_http_client
+from tools.routes import APIRoutes
 
 
 # Старые модели с использованием TypedDict были удалены
@@ -14,6 +15,7 @@ class AuthenticationClient(APIClient):
     """
     Клиент для работы с /api/v1/authentication
     """
+
     @allure.step("Authenticate user")  # Добавили allure шаг
     def login_api(self, request: LoginRequestSchema) -> Response:
         """
@@ -22,7 +24,10 @@ class AuthenticationClient(APIClient):
         :param request: Словарь с email и password.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/authentication/login", json=request.model_dump(by_alias=True))
+        return self.post(
+            f"{APIRoutes.AUTHENTICATION}/login",
+            json=request.model_dump(by_alias=True)
+        )
 
     # Теперь используем pydantic-модель для аннотации
     @allure.step("Refresh authentication token")  # Добавили allure шаг
@@ -34,14 +39,14 @@ class AuthenticationClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.post(
-            "/api/v1/authentication/refresh",
-            # Сериализуем модель в словарь с использованием alias
+            f"{APIRoutes.AUTHENTICATION}/refresh",
             json=request.model_dump(by_alias=True)
         )
 
     def login(self, request: LoginRequestSchema) -> LoginResponseSchema:
         response = self.login_api(request)
         return LoginResponseSchema.model_validate_json(response.text)
+
 
 def get_authentication_client() -> AuthenticationClient:
     """
