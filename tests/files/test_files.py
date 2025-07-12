@@ -7,6 +7,7 @@ import pytest
 from clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from clients.files.files_client import FilesClient
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
+from config import settings
 from fixtures.files import FileFixture
 from tools.allure.epics import AllureEpic
 from tools.allure.features import AllureFeature
@@ -20,7 +21,6 @@ from tools.assertions.files import assert_create_file_response, assert_get_file_
 from tools.assertions.schema import validate_json_schema
 
 
-
 @pytest.mark.files
 @pytest.mark.regression
 @allure.tag(AllureTag.FILES, AllureTag.REGRESSION)
@@ -32,8 +32,8 @@ class TestFiles:
     @allure.title("Create file")
     @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_create_file(self, files_client: FilesClient):
-        request = CreateFileRequestSchema(
-            upload_file="/Users/msemushev/Desktop/auto/autotests-api/testdata/files/image.png")
+
+        request=CreateFileRequestSchema(upload_file=settings.test_data.image_png_file)
         response = files_client.create_file_api(request)
         response_data = CreateFileResponseSchema.model_validate_json(response.text)
 
@@ -62,7 +62,7 @@ class TestFiles:
     def test_create_file_with_empty_filename(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             filename="",
-            upload_file="/Users/msemushev/Desktop/auto/autotests-api/testdata/files/image.png"
+            upload_file=settings.test_data.image_png_file
         )
         response = files_client.create_file_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
@@ -82,7 +82,7 @@ class TestFiles:
     def test_create_file_with_empty_directory(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             directory="",
-            upload_file="/Users/msemushev/Desktop/auto/autotests-api/testdata/files/image.png"
+            upload_file=settings.test_data.image_png_file
         )
         response = files_client.create_file_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
@@ -116,7 +116,6 @@ class TestFiles:
 
         # 6. Проверяем, что ответ соответствует схеме
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
-
 
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)

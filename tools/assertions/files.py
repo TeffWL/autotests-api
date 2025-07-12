@@ -3,8 +3,10 @@ import allure
 from clients.errors_schema import InternalErrorResponseSchema, ValidationErrorResponseSchema, ValidationErrorSchema
 from clients.files.files_schema import CreateFileResponseSchema, CreateFileRequestSchema, GetFileResponseSchema, \
     FileSchema
+from config import settings
 from tools.assertions.assert_equal import assert_equal
 from tools.assertions.errors import assert_internal_error_response, assert_validation_error_response
+
 
 @allure.step("Check file")  # Добавили allure шаг
 def assert_file(actual: FileSchema, expected: FileSchema):
@@ -20,7 +22,8 @@ def assert_file(actual: FileSchema, expected: FileSchema):
     assert_equal(actual.filename, expected.filename, "filename")
     assert_equal(actual.directory, expected.directory, "directory")
 
-@allure.step("Check create file response")  # Добавили allure шаг
+
+@allure.step("Check create file response")
 def assert_create_file_response(request: CreateFileRequestSchema, response: CreateFileResponseSchema):
     """
     Проверяет, что ответ на создание файла соответствует запросу.
@@ -29,12 +32,13 @@ def assert_create_file_response(request: CreateFileRequestSchema, response: Crea
     :param response: Ответ API с данными файла.
     :raises AssertionError: Если хотя бы одно поле не совпадает.
     """
-    # Формируем ожидаемую ссылку на загруженный файл
-    expected_url = f"http://localhost:8000/static/{request.directory}/{request.filename}"
+    # Используем значение хоста из настроек
+    expected_url = f"{settings.http_client.client_url}static/{request.directory}/{request.filename}"
 
     assert_equal(str(response.file.url), expected_url, "url")
     assert_equal(response.file.filename, request.filename, "filename")
     assert_equal(response.file.directory, request.directory, "directory")
+
 
 @allure.step("Check get file response")  # Добавили allure шаг
 def assert_get_file_response(
@@ -50,6 +54,7 @@ def assert_get_file_response(
     """
     assert_file(get_file_response.file, create_file_response.file)
 
+
 @allure.step("Check file not found response")  # Добавили allure шаг
 def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     """
@@ -62,6 +67,7 @@ def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     expected = InternalErrorResponseSchema(details="File not found")
     # Используем ранее созданную функцию для проверки внутренней ошибки
     assert_internal_error_response(actual, expected)
+
 
 @allure.step("Check get file with incorrect file id response")  # Добавили allure шаг
 def assert_get_file_with_incorrect_file_id_response(actual: ValidationErrorResponseSchema):

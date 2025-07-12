@@ -71,8 +71,6 @@ class ExercisesClient(APIClient):
 
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         response = self.get_exercise_api(exercise_id)
-        curl_command = Curlify(response.request).to_curl()
-        print(curl_command)
         return GetExerciseResponseSchema.model_validate_json(response.text)
 
     def create_exercise(self, request: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:

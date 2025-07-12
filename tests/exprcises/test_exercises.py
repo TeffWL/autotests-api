@@ -70,9 +70,6 @@ class TestExercises:
 
         response_data = CreateExerciseResponseSchema.model_validate_json(response.text)
 
-        curl_command = Curlify(response.request).to_curl()
-        print(curl_command)
-
         # Проверяем, что задание соответствует ранее созданному заданию
         assert_get_exercise_response(response_data, function_exercise.response)
 
