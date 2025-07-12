@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjEwLjk1Mzk4NiIsInVzZXJfaWQiOiI5M2VlYjlmNS1jZDRhLTQwY2YtYTExNC05ZWI1ZmUyZTdlODgifQ.vJhNtrHr6Cbh01IUbMjmNGSMaDX9O1ASqK_4NpuoSzg' \
+  -H 'content-length: 411' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Table tax action.","maxScore":97,"minScore":15,"description":"You about letter street radio worry. Choice increase present owner series election card.\nWe minute generation whom. Voice beyond key reduce matter. Then program process staff head benefit president.","estimatedTime":"6 weeks","previewFileId":"dcbe7988-1f40-449a-bf92-47e168b87eba","createdByUserId":"93eeb9f5-cd4a-40cf-a114-9eb5fe2e7e88"}'

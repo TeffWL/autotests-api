@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI5OjU5LjQ0OTMxMCIsInVzZXJfaWQiOiIzZWIwNzdmZC04NDY2LTRhN2QtYTMzOS00NTg0NDYxNTgxNWMifQ.KuCV-HoVfVpxiiSA_vaCsdq0bP2LTqRjZsi2GbVQV4c' \
+  -H 'content-length: 396' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Note fire show ahead speak light miss itself.","maxScore":76,"minScore":11,"description":"Last decade writer next save modern.\nQuickly wind somebody reduce decision movie. Build compare board cold. Generation bag month available tax body writer.","estimatedTime":"1 weeks","previewFileId":"4a93a362-fd73-47ee-af45-2d1a3d003576","createdByUserId":"3eb077fd-8466-4a7d-a339-45844615815c"}'

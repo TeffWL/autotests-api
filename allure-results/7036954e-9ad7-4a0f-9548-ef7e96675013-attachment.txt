@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/1a731692-764d-48a5-b065-fd1135b3127c' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjMzLjQ1OTk1OCIsInVzZXJfaWQiOiJhN2E5MTA0ZS04MmI5LTRmYmQtODRiMy04ZGZlY2RhNzIxMzIifQ.6XhnuuKboM6Psy_Fjo4hhsGn4nO97yJVX7WztS9qDko' \
+  -H 'content-length: 224' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Laugh million image response any.","maxScore":56,"minScore":2,"description":"Body someone lose nearly. Into green form allow huge increase.\nIncrease check specific foot kitchen loss he.","estimatedTime":"4 weeks"}'

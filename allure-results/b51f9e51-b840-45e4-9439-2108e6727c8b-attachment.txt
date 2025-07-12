@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjMyLjI5ODYxMyIsInVzZXJfaWQiOiI4Y2Y3NDY2MS0yMDRkLTQ3MTgtYTQzZi0xYWYyODFiZTBmYzUifQ.FeXl_hD_OHgqAqeroKEVLWHN3gd6zM4tDFSx-rGIwbY' \
+  -H 'content-length: 408' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Body magazine song over determine idea.","maxScore":66,"minScore":11,"description":"Far seem pay build wind finish behavior. Impact ball production father could four. Officer enough study.\nEstablish serious with area. Building hotel magazine consider thank.","estimatedTime":"6 weeks","previewFileId":"02c21e8a-b730-45fd-8095-3b42d66c97d7","createdByUserId":"8cf74661-204d-4718-a43f-1af281be0fc5"}'

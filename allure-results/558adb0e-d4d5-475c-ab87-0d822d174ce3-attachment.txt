@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjMyLjg3MzM0NiIsInVzZXJfaWQiOiJmMzA4ZDRkOC1mZmRiLTRmNzgtOWRjMS1jY2FjZGFkOWE1NTUifQ.Lh-H0SiD1B8zR8hQc39zw3dgm52Vv8iaTOskAgeteMM' \
+  -H 'content-length: 331' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Appear happen wall cultural into.","maxScore":87,"minScore":15,"description":"Business often minute live wonder win across. Current somebody strong then hospital today relationship.","estimatedTime":"3 weeks","previewFileId":"e3be226c-cc98-4a3c-b7ac-62b99b0caa2f","createdByUserId":"f308d4d8-ffdb-4f78-9dc1-ccacdad9a555"}'

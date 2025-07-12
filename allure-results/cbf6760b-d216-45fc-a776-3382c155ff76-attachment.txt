@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA2Ljg1OTc4OCIsInVzZXJfaWQiOiJlZDU4OTg2Yi0xZDg0LTQ1NzEtYTAxZC1iMDA3MzlmNDY0ZWQifQ.h7yOUfftIHFtefnSYk4QlNe3D70gy_KyiplULZt26P8' \
+  -H 'content-length: 424' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Subject could tough successful.","maxScore":65,"minScore":1,"description":"Research scientist news finally require answer just. Environment assume everything never mention whom whose. Candidate themselves kid middle.\nMany teacher run southern raise. Someone nature eat buy.","estimatedTime":"1 weeks","previewFileId":"fe4cc0c6-14f0-4f82-ae77-f5811d19e795","createdByUserId":"ed58986b-1d84-4571-a01d-b00739f464ed"}'

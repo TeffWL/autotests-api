@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA4LjYxNzcwMCIsInVzZXJfaWQiOiIxY2JjMWI5My01Y2ZmLTRmZGItYWE5Ny1mN2Y4OWYzZDc4ZDcifQ.baPhb3qKouC1YeQKauZsYQJuhowrwkm9AgupdODp9Xc' \
+  -H 'content-length: 315' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Part true a doctor a they follow yes.","maxScore":89,"minScore":18,"description":"Stage when speak from we crime. Term she fight near similar interesting can method.","estimatedTime":"9 weeks","previewFileId":"8bf2b827-77d3-45c0-b4a5-7ad505ee2c89","createdByUserId":"1cbc1b93-5cff-4fdb-aa97-f7f89f3d78d7"}'

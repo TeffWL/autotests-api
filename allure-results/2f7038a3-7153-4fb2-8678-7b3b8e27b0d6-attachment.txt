@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI4LjkyMzM0NiIsInVzZXJfaWQiOiIwN2FmNjY0Zi04MGNhLTQ4ZTUtYmFiNy02Nzg4ZDNmODQzYWUifQ.DZ7Dlh7ujBo0BYPYMlYtxc1Nh_M8m8vI-WMgEfZ1YaQ' \
+  -H 'content-length: 407' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Person story claim future certain before edge.","maxScore":67,"minScore":11,"description":"Human between employee make fear clearly boy air. Bill add hope begin address owner.\nPut ready officer see new. Test position into red represent know majority group.","estimatedTime":"9 weeks","previewFileId":"96536c07-d2dd-4f0b-9046-961dc8d09adc","createdByUserId":"07af664f-80ca-48e5-bab7-6788d3f843ae"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA3LjQ1MjA0NSIsInVzZXJfaWQiOiJmZTg1YTQwOC0yZDljLTQ4NDEtYTc5OC1iZTc2MWY5NGJmY2IifQ.9eul1xhzheQJKKwCuDhDcePvpqDnfVv8vp1JIjrcmTk' \
+  -H 'content-length: 401' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fact individual whatever.","maxScore":62,"minScore":5,"description":"If old travel hold base. Themselves myself sometimes reveal image.\nLarge everyone billion respond. Sure cup ago section yard price write. Medical onto the large improve clearly her.","estimatedTime":"6 weeks","previewFileId":"ae1f3e25-dbb1-47ce-a5c0-7c72f3040f9f","createdByUserId":"fe85a408-2d9c-4841-a798-be761f94bfcb"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU2LjYxMzE3NiIsInVzZXJfaWQiOiI3MzQ0YTAzYi0zNTQ3LTRjMmEtOTA0NS1jYTExYTgwYjU1YTYifQ.E8oHUTejFM04Fwa2OZbz0k1o4n5htKPK20l9bzemwas' \
+  -H 'content-length: 284' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Feel sense style third family stop.","courseId":"a24695b7-75e3-4869-bf19-4243d0474bcf","maxScore":66,"minScore":19,"orderIndex":28,"description":"Study method address others just. May knowledge certain group point meet artist. Tonight happen any.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjEwLjM1OTU3MyIsInVzZXJfaWQiOiJjNjQwNjIwNi04NGI4LTQ5Y2YtYjEwNC1jZDcyZGU2ZGM2ZjEifQ.zGsktWRYhpjihWy25yvFBmD_xgOyAfzXArPkq4OOioI' \
+  -H 'content-length: 377' \
+  -H 'content-type: application/json' \
+  -d '{"title":"West evidence piece life when among action somebody.","courseId":"b4ac1350-d877-405d-8297-32bfe67cfdc2","maxScore":93,"minScore":30,"orderIndex":100,"description":"Point item for enough gun star. Child while example always western through. Interesting cold behavior law thank evidence.\nYeah low pattern anyone. Generation lay address tax.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU3Ljc3MjYxMiIsInVzZXJfaWQiOiIzNjQ0ZmVkMy0xYWIwLTRlZmEtODYyNC1jYjc0M2JlYTVhNTAifQ.oYqiJ1IZxe5Tiwb1yOdDdtxbZZM84-AqG0YAwnyISho' \
+  -H 'content-length: 364' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Another part final fire city newspaper.","maxScore":87,"minScore":12,"description":"Seven parent story continue sure. Nation I make science newspaper.\nClose we study approach whether who pay. Perhaps each provide.","estimatedTime":"2 weeks","previewFileId":"3ade2f6b-b6a4-4ff4-9baf-34e31192fa8e","createdByUserId":"3644fed3-1ab0-4efa-8624-cb743bea5a50"}'

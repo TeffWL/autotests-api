@@ -17,8 +17,8 @@ def assert_status_code(actual: int, expected: int):
         f'Actual status code: {actual}'
     )
 
-@allure.step("Check that {name} equals to {expected}")  # Добавили allure шаг
 
+@allure.step("Check that {name} equals to {expected}")  # Добавили allure шаг
 def assert_equal(actual: Any, expected: Any, name: str):
     """
     Проверяет, что фактическое значение равно ожидаемому.

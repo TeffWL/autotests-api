@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI5OjU4LjI5MjI5MCIsInVzZXJfaWQiOiIwYmNmMDU3My00NDgyLTQ0NjYtOTc4My1kNTgzY2ZmMGNiMGIifQ.XzI_1WUQTszI3ErnPIbZAF9caZCZLUS6rnvhz9CNLyk' \
+  -H 'content-length: 393' \
+  -H 'content-type: application/json' \
+  -d '{"title":"General few there world when free each responsibility.","maxScore":88,"minScore":5,"description":"Chance majority inside how final scene ok.\nPolice sort return society two meet north rich. Everybody community line glass employee really party.","estimatedTime":"7 weeks","previewFileId":"98d48ade-e723-4a5e-acda-c6346a584d15","createdByUserId":"0bcf0573-4482-4466-9783-d583cff0cb0b"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjM1Ljc5NjI5NiIsInVzZXJfaWQiOiJiYWQ0MjQ2Ni0yNzg1LTRlZWQtYjU4ZC03YmM4NTkxN2RkZjIifQ.NMHnje1_h8j8KX8rVZuKFgB81IcD89-AdjNwYQEoGgM' \
+  -H 'content-length: 356' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Soldier us company not line camera.","maxScore":69,"minScore":28,"description":"Several fine its. Week out professor activity glass if include. Senior adult number baby. Car there out daughter step instead.","estimatedTime":"5 weeks","previewFileId":"339527b6-3af3-4130-ac72-4e326feaed55","createdByUserId":"bad42466-2785-4eed-b58d-7bc85917ddf2"}'

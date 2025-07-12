@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA4LjYxNzcwMCIsInVzZXJfaWQiOiIxY2JjMWI5My01Y2ZmLTRmZGItYWE5Ny1mN2Y4OWYzZDc4ZDcifQ.baPhb3qKouC1YeQKauZsYQJuhowrwkm9AgupdODp9Xc' \
+  -H 'content-length: 323' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Option relationship successful story those reflect.","courseId":"470a4356-23d2-4701-b147-58f4660e998e","maxScore":80,"minScore":3,"orderIndex":4,"description":"Me off free debate heart budget. Notice maybe of employee subject wish send. Sense sense social significant single challenge.","estimatedTime":"7 weeks"}'

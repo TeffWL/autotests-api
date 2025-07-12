@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI4LjM0NzM0OSIsInVzZXJfaWQiOiJiZTdkZjMzYy0xNmQwLTQxZjItOTIyZC0xODVkZTc4OGU5NzkifQ.rMeNCjd5m8B31PvtRcMnuFPfTe7Cpk4xyl9pEm5QBXw' \
+  -H 'content-length: 366' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bring section example young visit these garden.","maxScore":71,"minScore":16,"description":"Make page color. Medical resource six itself public party. System market medical direction. Build push carry consumer might.","estimatedTime":"9 weeks","previewFileId":"57a7d428-2f50-4149-86ac-bac762d96e34","createdByUserId":"be7df33c-16d0-41f2-922d-185de788e979"}'

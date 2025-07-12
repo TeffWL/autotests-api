@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjAxLjI0MTYyMCIsInVzZXJfaWQiOiI1NDk5YjY4Ny1mODg3LTRkNjAtYmYyOC1jNzU3NzAxNTI0MWYifQ.Y8t4O9pUClbfPinBxXkBPD2fHs6kYu1aE0FGe8imhSw' \
+  -H 'content-length: 409' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Issue star religious.","maxScore":60,"minScore":16,"description":"Social type prepare million voice leader. Bag appear name however.\nFinancial activity movement night attack. News blue paper study lose win else.\nNeed lawyer exactly cup least religious plan.","estimatedTime":"9 weeks","previewFileId":"ebaa9a82-3cf8-4e97-ae70-0f50e1f907ff","createdByUserId":"5499b687-f887-4d60-bf28-c7577015241f"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI3Ljc2MTU4NyIsInVzZXJfaWQiOiIzNmYyYTE5MS1jOWE2LTRjZGEtODdkZC02ZTBhM2U2YzU0MzAifQ.eRkoP816wGqgHC8MF4g5y9V4CzgXLLkfxm0ZunYoC9o' \
+  -H 'content-length: 344' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Force fight career hour goal role day.","maxScore":50,"minScore":19,"description":"Federal her improve dog white letter entire. Long will food despite option. Much sit heavy create second list.","estimatedTime":"10 weeks","previewFileId":"2867fc7b-fe59-4d08-b9e6-dfae76773fb9","createdByUserId":"36f2a191-c9a6-4cda-87dd-6e0a3e6c5430"}'

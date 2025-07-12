@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjAyLjQyNjExMyIsInVzZXJfaWQiOiI0MGJlMDdlMC0wZmY1LTQ5ZTItYTliMC02MzQyYTBiOTIxOTEifQ.AtzfBTNIzzqYGqO9tvPe2lk-qVvzFMBsGs4QyEHgr64' \
+  -H 'content-length: 365' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Own positive difficult agreement.","maxScore":65,"minScore":5,"description":"Agency subject doctor miss even threat. Whose able night maybe tell.\nUp start either do none team before goal. Onto away official expect.","estimatedTime":"2 weeks","previewFileId":"70d761c4-e0f7-4b08-8ceb-fc8a090c3959","createdByUserId":"40be07e0-0ff5-49e2-a9b0-6342a0b92191"}'
