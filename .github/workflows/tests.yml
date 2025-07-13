@@ -95,3 +95,4 @@ jobs:
           force_orphan: true
           allow_empty_commit: true
           keep_files: false
+          commit_message: "Deploy Allure report"
