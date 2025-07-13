@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+           python-version: '3.12'
 
       - name: Clone test server repository
         run: git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
@@ -44,29 +44,53 @@ jobs:
 
       - name: Run API tests with pytest and generate Allure results
         run: |
-          pytest -m regression --alluredir=allure-results --numprocesses 2
+          pytest -m regression
 
-      - name: Upload test results
+      - name: Restore Coverage history
+        uses: actions/cache/restore@v4
+        with:
+          path: coverage-history.json
+          key: coverage-history-${{ github.run_id }}
+          restore-keys: |
+            coverage-history-
+
+      - name: Generate Coverage report
+        run: |
+          swagger-coverage-tool save-report
+
+      - name: Cache Coverage  history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: coverage-history.json
+          key: coverage-history-${{ github.run_id }}
+
+      - name: Upload Coverage results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage.html
+
+      - name: Upload Allure results
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results
 
   publish-report:
-    needs: run-tests
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
 
     steps:
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global --add safe.directory /github/workspace
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - name: Download test results
+      - name: Download Allure results artifact
         uses: actions/download-artifact@v4
         with:
           name: allure-results
+          path: allure-results
 
       - name: Get Allure history
         uses: actions/checkout@v4
@@ -75,24 +99,18 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
 
-      - name: Generates Allure Report with history
+      - name: Generate Allure Report with history
         uses: simple-elf/allure-report-action@v1.12
         if: always()
         with:
           allure_results: allure-results
           allure_history: allure-history
 
-      - name: Deploy report to Github Pages
+      - name: Deploy to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          force_orphan: true
-          allow_empty_commit: true
-          keep_files: false
-          commit_message: "Deploy Allure report"
