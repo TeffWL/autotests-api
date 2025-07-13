@@ -1,6 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from curlify2 import Curlify
+
 from http import HTTPStatus
 import pytest
 from clients.authentication.authentication_client import AuthenticationClient

@@ -2,7 +2,7 @@ from importlib.metadata import metadata
 
 import allure
 from httpx import Response
-from curlify2 import Curlify
+
 
 from clients.api_client import APIClient
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
