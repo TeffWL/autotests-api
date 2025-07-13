@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjEwLjM1OTU3MyIsInVzZXJfaWQiOiJjNjQwNjIwNi04NGI4LTQ5Y2YtYjEwNC1jZDcyZGU2ZGM2ZjEifQ.zGsktWRYhpjihWy25yvFBmD_xgOyAfzXArPkq4OOioI' \
+  -H 'content-length: 374' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Impact Republican imagine.","maxScore":56,"minScore":27,"description":"Ground alone worry right get manage. Fight realize through system every open. Collection over and suggest. To market decision provide station which land.","estimatedTime":"6 weeks","previewFileId":"0deae22e-f581-4896-bf16-a07b659e52b5","createdByUserId":"c6406206-84b8-49cf-b104-cd72de6dc6f1"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA5LjIwMTU0NyIsInVzZXJfaWQiOiI3YmViMDlmMi0yYzcxLTRhZjctYmEzMS0yZWQ4ZmI3OGE2N2IifQ.FVkIOAJ5drAp3NfhVZaUy50AGaNt96EQWaDnrdWfjLI' \
+  -H 'content-length: 362' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Staff property pay most indeed draw eight.","maxScore":68,"minScore":13,"description":"Among everybody though believe current room surface. Force get teacher hospital. Herself action south case successful street.","estimatedTime":"5 weeks","previewFileId":"dd2d8718-22a2-4d53-849c-79274d1b2274","createdByUserId":"7beb09f2-2c71-4af7-ba31-2ed8fb78a67b"}'

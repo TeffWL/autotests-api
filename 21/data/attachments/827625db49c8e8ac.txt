@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjEwLjk1Mzk4NiIsInVzZXJfaWQiOiI5M2VlYjlmNS1jZDRhLTQwY2YtYTExNC05ZWI1ZmUyZTdlODgifQ.vJhNtrHr6Cbh01IUbMjmNGSMaDX9O1ASqK_4NpuoSzg' \
+  -H 'content-length: 331' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stand easy lot among head use consider line.","courseId":"df34c532-9708-4b75-8db0-8f302373e18f","maxScore":92,"minScore":6,"orderIndex":64,"description":"Foot campaign material east happen. Its involve professor well. Difference writer region least. Drug enter them Democrat analysis American.","estimatedTime":"7 weeks"}'

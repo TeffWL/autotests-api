@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/23eda1c2-58ed-4c87-9ea9-43f6ff98e704' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI3Ljc2MTU4NyIsInVzZXJfaWQiOiIzNmYyYTE5MS1jOWE2LTRjZGEtODdkZC02ZTBhM2U2YzU0MzAifQ.eRkoP816wGqgHC8MF4g5y9V4CzgXLLkfxm0ZunYoC9o' \
+  -H 'content-length: 324' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Security maintain once authority agree free.","maxScore":71,"minScore":30,"description":"Central result door common avoid mean. Analysis rich rate its follow wonder.\nClearly music food staff. Feeling blue including everyone maybe. Girl religious management share stand plant knowledge.","estimatedTime":"3 weeks"}'

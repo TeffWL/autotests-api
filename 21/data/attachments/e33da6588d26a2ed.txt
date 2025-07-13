@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU4Ljk0MzM2NyIsInVzZXJfaWQiOiIxZDM0Njc5Yi0zYWMyLTQ5NDAtODU2MS0xOTRkZjgzMTlkYWEifQ.OD_dDhA0BKdrdDxXJgPnDdReaC2cr26mKcglshnLOgQ' \
+  -H 'content-length: 386' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reflect today yourself what night.","maxScore":71,"minScore":13,"description":"She hair until western. Which toward senior order. Arm lot know.\nCollection believe hospital event.\nMain sea physical red from. Possible watch real family.","estimatedTime":"7 weeks","previewFileId":"d8e5e93b-8898-47a3-97ef-885831f7e58f","createdByUserId":"1d34679b-3ac2-4940-8561-194df8319daa"}'

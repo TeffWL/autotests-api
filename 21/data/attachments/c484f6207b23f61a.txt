@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjAwLjA4NTI4MyIsInVzZXJfaWQiOiJmYjFjZTZiOC04NjYyLTQ2YWQtODQyOS1lOTMzOTFhODE0YzkifQ.sXaljOokkswU7oZOZhlpiJfrlE-gx6VAtdz81-EKRbg' \
+  -H 'content-length: 313' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Difficult best approach rather land range hard man.","maxScore":81,"minScore":26,"description":"Word station house certain election both. Radio visit ground level.","estimatedTime":"7 weeks","previewFileId":"3d93d68c-bb93-4379-8c93-621a8c88b0ea","createdByUserId":"fb1ce6b8-8662-46ad-8429-e93391a814c9"}'

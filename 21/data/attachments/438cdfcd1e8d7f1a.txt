@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjMzLjQ1OTk1OCIsInVzZXJfaWQiOiJhN2E5MTA0ZS04MmI5LTRmYmQtODRiMy04ZGZlY2RhNzIxMzIifQ.6XhnuuKboM6Psy_Fjo4hhsGn4nO97yJVX7WztS9qDko' \
+  -H 'content-length: 340' \
+  -H 'content-type: application/json' \
+  -d '{"title":"May skill book marriage story cold.","maxScore":69,"minScore":6,"description":"Case effect will industry piece leave.\nWithin professional live ball site budget property. Above parent night.","estimatedTime":"1 weeks","previewFileId":"3498d614-c5e8-4f06-8abc-755126eb48a3","createdByUserId":"a7a9104e-82b9-4fbd-84b3-8dfecda72132"}'

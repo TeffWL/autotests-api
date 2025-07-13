@@ -1,0 +1,11 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make DELETE request to http://localhost:8000/api/v1/files/2e162e9c-aaca-4b0f-bcba-9f4f7c4f3717
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files/2e162e9c-aaca-4b0f-bcba-9f4f7c4f3717
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/files/2e162e9c-aaca-4b0f-bcba-9f4f7c4f3717
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 404 Not Found from http://localhost:8000/api/v1/files/2e162e9c-aaca-4b0f-bcba-9f4f7c4f3717
+[32mINFO    [0m SCHEMA_ASSERTIONS:schema.py:21 Validating JSON schema

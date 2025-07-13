@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU3LjE5NDYwNiIsInVzZXJfaWQiOiI2MzEwN2FlNS05NjdjLTQ0MTEtYTE5Yy00NmYyOTA5OWRmM2UifQ.LJR9MVsbnBK8rgwIULfU26pJrhX0uslCD04D8vuiY38' \
+  -H 'content-length: 302' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Off cut main benefit study ground.","maxScore":70,"minScore":19,"description":"Possible offer measure likely kid summer training here. Reduce data yeah.","estimatedTime":"1 weeks","previewFileId":"2cf7c262-8565-49de-b51c-fb7195d349c5","createdByUserId":"63107ae5-967c-4411-a19c-46f29099df3e"}'

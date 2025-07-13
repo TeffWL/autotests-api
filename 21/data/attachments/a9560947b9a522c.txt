@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA5Ljc3NjAwMCIsInVzZXJfaWQiOiJhY2JkZmIyNS1kNDNjLTQxMTYtYTljOC0zYTRiY2Q5YTA4NTIifQ.fsxxKNPM9OjxBxUMwcmTjmM4_bPqWDe0lPZEqgS_T7o' \
+  -H 'content-length: 407' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Power option suddenly home spring compare office.","maxScore":88,"minScore":11,"description":"Interest everything agree local mission budget. Down area almost vote program water too level.\nIndeed reveal reflect area age protect.\nAhead everything maintain.","estimatedTime":"6 weeks","previewFileId":"b4173ea2-87b6-4223-8d6c-a54e0775bda3","createdByUserId":"acbdfb25-d43c-4116-a9c8-3a4bcd9a0852"}'

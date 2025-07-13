@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/a90ed951-7ac6-4c36-adfd-a1e4926c85dc' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU3Ljc3MjYxMiIsInVzZXJfaWQiOiIzNjQ0ZmVkMy0xYWIwLTRlZmEtODYyNC1jYjc0M2JlYTVhNTAifQ.oYqiJ1IZxe5Tiwb1yOdDdtxbZZM84-AqG0YAwnyISho' \
+  -H 'content-length: 302' \
+  -H 'content-type: application/json' \
+  -d '{"title":"More happy list pay picture other.","courseId":"9f374d43-060b-48fc-951c-d4ac73ff3b84","maxScore":72,"minScore":9,"orderIndex":32,"description":"Raise camera meet dog recently size culture. Series her growth this. Truth protect benefit. Them series why wind second.","estimatedTime":"8 weeks"}'

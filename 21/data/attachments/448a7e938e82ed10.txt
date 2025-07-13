@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU4LjM1MjQ3MSIsInVzZXJfaWQiOiJiY2ZlZGU5MC0yNTY3LTRlYzctYWJjNC1jZjUwODMzNTYyYmYifQ.ERQSua2D3DnAjabWY9FNbGx9Ma6XJmC3KXHh7zpo4mY' \
+  -H 'content-length: 338' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Consider kind piece situation.","maxScore":76,"minScore":27,"description":"Society film vote building. Police lawyer light start tax beautiful whose. Drive machine reach against door work.","estimatedTime":"3 weeks","previewFileId":"dda5926c-b08e-4fba-b61a-59d280854197","createdByUserId":"bcfede90-2567-4ec7-abc4-cf50833562bf"}'

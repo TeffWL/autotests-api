@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjMyLjI5ODYxMyIsInVzZXJfaWQiOiI4Y2Y3NDY2MS0yMDRkLTQ3MTgtYTQzZi0xYWYyODFiZTBmYzUifQ.FeXl_hD_OHgqAqeroKEVLWHN3gd6zM4tDFSx-rGIwbY' \
+  -H 'content-length: 436' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Close rule however big so final human behavior.","maxScore":55,"minScore":10,"description":"Recognize his various water team under option spend. Next yet for animal minute these. Role race evidence industry movement personal vote.\nYet for few huge early. Young way through court often.","estimatedTime":"2 weeks","previewFileId":"02c21e8a-b730-45fd-8095-3b42d66c97d7","createdByUserId":"8cf74661-204d-4718-a43f-1af281be0fc5"}'

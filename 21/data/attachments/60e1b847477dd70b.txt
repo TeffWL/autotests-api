@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjMwOjAyLjQyNjExMyIsInVzZXJfaWQiOiI0MGJlMDdlMC0wZmY1LTQ5ZTItYTliMC02MzQyYTBiOTIxOTEifQ.AtzfBTNIzzqYGqO9tvPe2lk-qVvzFMBsGs4QyEHgr64' \
+  -H 'content-length: 331' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stay subject reach under.","courseId":"2a8b56d2-c9c8-4fc6-8e31-d6d6c4a143c7","maxScore":70,"minScore":4,"orderIndex":61,"description":"Why keep realize west new ask. Vote thousand specific music.\nCar treat travel evidence. Four happen imagine debate than environmental. Level beat help teach.","estimatedTime":"9 weeks"}'

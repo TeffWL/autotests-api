@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/a6b98836-193c-434c-bfbf-545a0687aa6a' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEzVDIwOjM5OjI0Ljg4NzM4NSIsInVzZXJfaWQiOiI2YWI4Y2E0MC03MTRiLTQyYjUtOGFhZC1kY2JkZmIyNWY5OWYifQ.QGbRo-Xii1WNwtK5VoTvBiDEkIDOKx-qdwcsr2CR9n4' \
+  -H 'content-length: 345' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pretty big sometimes lead doctor.","courseId":"ea0efa52-5050-4f7c-8daf-1e0698abae68","maxScore":88,"minScore":22,"orderIndex":24,"description":"Know chair inside these treatment four. Deep represent television begin heavy. Open read rule tough marriage quickly. Chance floor affect surface of various these.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI5LjUwODc5MCIsInVzZXJfaWQiOiJjYWU4MWRlNi1kNzdjLTRiZjgtYWNhMy1kNGQ0ZWRlODY1NzYifQ.Pn5Xp_FnF8zdJUZdJKAdNfj8-6Vko0Qw-Z3aKjmy1bs' \
+  -H 'content-length: 385' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Much law until pull city fast nothing.","courseId":"5b9d7e52-f342-42c3-9d6b-bde0014b81ca","maxScore":58,"minScore":11,"orderIndex":27,"description":"Bank have hair trip meet program. Dream give lot nothing help interview.\nInto not similar owner apply. Large notice security these factor. Fish indeed professional site practice thought left sound.","estimatedTime":"5 weeks"}'

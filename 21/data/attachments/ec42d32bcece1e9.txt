@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/5224eabb-1551-46ac-97cb-e01c365e8aaa' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjA0OjI5LjUwODc5MCIsInVzZXJfaWQiOiJjYWU4MWRlNi1kNzdjLTRiZjgtYWNhMy1kNGQ0ZWRlODY1NzYifQ.Pn5Xp_FnF8zdJUZdJKAdNfj8-6Vko0Qw-Z3aKjmy1bs' \
+  -H 'content-length: 353' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reveal table likely memory state energy.","courseId":"4c8557d8-021a-43f6-9a01-fd883fbab31d","maxScore":69,"minScore":2,"orderIndex":24,"description":"Responsibility he weight significant. Meet build nature follow blue develop.\nPlay bar soon.\nSkill gun southern big. Eye event bed seven. Perhaps though give dream.","estimatedTime":"2 weeks"}'

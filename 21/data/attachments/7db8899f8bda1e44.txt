@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU4LjM1MjQ3MSIsInVzZXJfaWQiOiJiY2ZlZGU5MC0yNTY3LTRlYzctYWJjNC1jZjUwODMzNTYyYmYifQ.ERQSua2D3DnAjabWY9FNbGx9Ma6XJmC3KXHh7zpo4mY' \
+  -H 'content-length: 309' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Unit realize similar family system increase until.","courseId":"cbd6ad72-4fdf-4a6d-b773-5c34c6c12377","maxScore":98,"minScore":6,"orderIndex":44,"description":"Maybe mind know fly. Wind people he leader.\nComputer eat close citizen fine science need. Know TV air foreign.","estimatedTime":"4 weeks"}'

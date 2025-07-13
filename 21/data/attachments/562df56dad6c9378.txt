@@ -1,0 +1,14 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/exercises
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make PATCH request to http://localhost:8000/api/v1/exercises/a8c79cae-c921-43c0-b60b-9fabd24e997a
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/exercises/a8c79cae-c921-43c0-b60b-9fabd24e997a
+[32mINFO    [0m BASE_ASSERTIONS:base.py:19 Check that response status code equals to 200
+[32mINFO    [0m SCHEMA_ASSERTIONS:schema.py:21 Validating JSON schema

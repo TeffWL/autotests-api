@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEzVDIwOjM5OjIzLjY5OTc5NSIsInVzZXJfaWQiOiI1YmM2Yzk0Ny01MjA3LTQ1ZmMtOGQ5MC1jODE3NjI4MzJjOGIifQ.6xupztnE6B0RAYbT5NETEmmzSPlpvQQhxCvgmHCpc7A' \
+  -H 'content-length: 395' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Can deal call interesting.","maxScore":88,"minScore":14,"description":"Fall miss include budget foreign. Fine everyone down once any down specific. Public seat well player action set east.\nFire successful change arrive through account movement.","estimatedTime":"6 weeks","previewFileId":"8e15813d-c362-4082-a13d-bf4b1ad2504a","createdByUserId":"5bc6c947-5207-45fc-8d90-c81762832c8b"}'

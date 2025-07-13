@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEzVDIwOjM5OjIzLjQyNjkxOSIsInVzZXJfaWQiOiJiMjQyOWJkZC0zMmVmLTQ3OWQtYjRmNS1iOWFiMzk5YjFkZGEifQ.ouhDxWPcZ2lETwZiyUrrf4BTMFrkFw2bz35P7cbR2rM' \
+  -H 'content-length: 357' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Group house seat cultural.","maxScore":83,"minScore":13,"description":"Job other black other day. Maintain less responsibility hair.\nHeart after degree clearly manage. End training arrive relationship upon.","estimatedTime":"9 weeks","previewFileId":"75570f4a-9561-455f-8025-1ad7a6fe904a","createdByUserId":"b2429bdd-32ef-479d-b4f5-b9ab399b1dda"}'

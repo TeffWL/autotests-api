@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU3LjE5NDYwNiIsInVzZXJfaWQiOiI2MzEwN2FlNS05NjdjLTQ0MTEtYTE5Yy00NmYyOTA5OWRmM2UifQ.LJR9MVsbnBK8rgwIULfU26pJrhX0uslCD04D8vuiY38' \
+  -H 'content-length: 325' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wrong rest firm much federal degree anything.","courseId":"f1484f32-8189-4c6d-9cfe-abf4b2adb0ad","maxScore":73,"minScore":3,"orderIndex":91,"description":"Important share everybody. Fine hair skill act.\nPage probably sort seek tonight movie order early. Executive back charge body nice.","estimatedTime":"6 weeks"}'

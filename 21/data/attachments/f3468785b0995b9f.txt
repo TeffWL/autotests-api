@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU2LjYxMzE3NiIsInVzZXJfaWQiOiI3MzQ0YTAzYi0zNTQ3LTRjMmEtOTA0NS1jYTExYTgwYjU1YTYifQ.E8oHUTejFM04Fwa2OZbz0k1o4n5htKPK20l9bzemwas' \
+  -H 'content-length: 363' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Son something spend their culture public.","maxScore":73,"minScore":4,"description":"Discover dinner toward team ok summer. Watch move turn space four television challenge.\nFollow sure door difference why budget.","estimatedTime":"6 weeks","previewFileId":"4fafd9f1-43f6-49cb-b745-795b7d36b65a","createdByUserId":"7344a03b-3547-4c2a-9045-ca11a80b55a6"}'

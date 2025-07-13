@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEzVDIwOjM5OjI3LjAwMzQ3NSIsInVzZXJfaWQiOiJmNjg5ZDA4Yi1hYTFmLTRkOGItYmY5ZC05NzAxMDYwN2FmN2YifQ.FdCUbnUqZSC-qUugoi31mhOkF_tddUh3y2eIRkXe01k' \
+  -H 'content-length: 359' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Third science director voice family leader story.","maxScore":62,"minScore":10,"description":"Glass realize resource pick green usually. Dog start rather wait pick. Social eye opportunity consumer of sea best.","estimatedTime":"1 weeks","previewFileId":"61bf19eb-087e-42ba-a7d3-5ce47db4547d","createdByUserId":"f689d08b-aa1f-4d8b-bf9d-97010607af7f"}'

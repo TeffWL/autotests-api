@@ -1,0 +1,13 @@
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/courses?userId=190928a0-71fe-4c27-ad77-8d5853683182
+[32mINFO    [0m HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses?userId=190928a0-71fe-4c27-ad77-8d5853683182
+[32mINFO    [0m BASE_ASSERTIONS:base.py:19 Check that response status code equals to 200
+[32mINFO    [0m BASE_ASSERTIONS:base.py:58 Check that length of "courses" equals to 1
+[32mINFO    [0m SCHEMA_ASSERTIONS:schema.py:21 Validating JSON schema

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEzVDIwOjM5OjI3LjAwMzQ3NSIsInVzZXJfaWQiOiJmNjg5ZDA4Yi1hYTFmLTRkOGItYmY5ZC05NzAxMDYwN2FmN2YifQ.FdCUbnUqZSC-qUugoi31mhOkF_tddUh3y2eIRkXe01k' \
+  -H 'content-length: 352' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Law get Mr.","courseId":"e938dca8-7834-4121-80de-aa1f57f70f35","maxScore":62,"minScore":11,"orderIndex":49,"description":"However international address seem energy tell. Street control tree happen each imagine. Whose garden garden call.\nFinancial spend theory create. Necessary food could possible benefit entire.","estimatedTime":"7 weeks"}'

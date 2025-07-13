@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjE2OjU2LjAxNTg5OSIsInVzZXJfaWQiOiI4M2JlMTVmMy00NmJkLTRmOGMtOGZlZi0xNzI1NWU5ZjNkNmEifQ.KkKFzhU0poJBMj9ggj5FhvVYOAPfb8y8RXT9CsNZIo0' \
+  -H 'content-length: 388' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Security resource cover house away brother shake.","maxScore":62,"minScore":6,"description":"Better current history media. Professional space point pretty.\nEmployee two pass fact better deep. Eight occur television cultural store phone.","estimatedTime":"10 weeks","previewFileId":"0e9e31fd-9257-4329-b1db-30563f1f74d2","createdByUserId":"83be15f3-46bd-4f8c-8fef-17255e9f3d6a"}'

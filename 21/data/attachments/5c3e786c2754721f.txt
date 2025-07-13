@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA3LTEyVDEzOjI3OjA4LjAyNTQyMCIsInVzZXJfaWQiOiIzMDU1ZDA3Ny1jNmFiLTQyZGUtYjcxYy1mYjU1MDZhMjllODUifQ.JkWO4zgH-WbiXBDLA9XMKjFR6JIP0HaQRsJWSSUF8HQ' \
+  -H 'content-length: 358' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Collection nation site message somebody every.","maxScore":77,"minScore":8,"description":"Eat whole use draw court whatever. Walk successful dark choose manage one candidate. Guy from teach security no event.","estimatedTime":"4 weeks","previewFileId":"7be8562b-c59f-4ac2-8709-220bf992ee04","createdByUserId":"3055d077-c6ab-42de-b71c-fb5506a29e85"}'
